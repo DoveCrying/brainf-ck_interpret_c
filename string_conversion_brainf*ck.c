@@ -2,11 +2,6 @@
 #include <string.h>
 #include <stdbool.h>
 
-bool reachesZero(int divident, int divisor)
-{
-  bool false;
-}
-
 void converter(char* code)
 {
   // Brainf*ck commands
@@ -31,32 +26,17 @@ void converter(char* code)
     difference = currChar - prevChar;
     if (difference < 0)
     {
-      if (difference > -6)
-      {
         for (int j = 0; j > difference; j--)
         {
           strncat(result,&minus,1);
         }
-      }
-      else
-      {
-
-       
-        strncat(result,&next,1);
-        for (int j = 0; j< remnant; j++)
-        {
-          strncat(result,&minus,1);
-        }
-      }
+      
     }
     else
     {
-      if (difference < 6)
+      for (int j = 0; j < difference; j++)
       {
-        for (int j = 0; j < difference; j++)
-        {
-          strncat(result,&plus,1);
-        }
+        strncat(result,&plus,1);
       }
     }
     prevChar = currChar;
